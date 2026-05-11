@@ -1,16 +1,15 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
 		
-        System.out.println("Wilkommen zu unserem dreckssau text spiel");
+        System.out.println("Wilkommen zu unserem Dreckssau Text-Spiel");
         
         while(true) {
-        	System.out.println("wollen sie eine runde spielen");
+        	System.out.println("Wollen Sie eine runde spielen");
         	System.out.println("0 = nein");
         	System.out.println("1 = ja");
         	
@@ -18,11 +17,22 @@ public class Main {
         	awn = sc.nextInt();
         	
         	if(awn == 1) {
-        		System.out.println("okaz");
+        		System.out.println("Okay :)");
         		
         		System.out.println("Spieler anzahl bitte angeben :");
         		
-        		int spa = sc.nextInt();
+        		int spa = sc.nextInt();   // spa ist spieler anzahl
+
+        		
+        		while(int i = 0; spa > i; i++; ) {
+        			System.out.println("Bitte Spieler namen angeben");
+        			System.out.println("Spieler " + "i :");
+        			String spn = new String(sc.next());
+        			ArrayList<> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrayes zu erstellen
+        			
+        		}
+        		
+        		
         		
         		// hier muss man dann das spiel initialisieren, also jedem 
         		// spieler die ihm zustehendem karten geben.
