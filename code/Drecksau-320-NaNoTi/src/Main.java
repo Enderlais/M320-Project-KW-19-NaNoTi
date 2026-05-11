@@ -19,6 +19,22 @@ public class Main {
         	
         	if(awn == 1) {
         		System.out.println("okaz");
+        		
+        		System.out.println("Spieler anzahl bitte angeben :");
+        		
+        		int spa = sc.nextInt();
+        		
+        		// hier muss man dann das spiel initialisieren, also jedem 
+        		// spieler die ihm zustehendem karten geben.
+        		// bei 2 sind das 5 schweine, 3 = 4, 4 = 3
+        		//hier muessen auch 3 random aktions karten ausgeteilt werden.
+        		// der rest der karten muss auf einen ablagestapel
+        		// alle schweine-attribute auf 0 setzen
+        		
+        		
+        		
+        		
+        		
         	}
         	
         }
