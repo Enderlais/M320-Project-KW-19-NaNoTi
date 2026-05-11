@@ -21,7 +21,18 @@ public class Main {
         		
         		System.out.println("Spieler anzahl bitte angeben :");
         		
-        		int spa = sc.nextInt();
+        		int spa = sc.nextInt();   // spa ist spieler anzahl
+
+        		
+        		while(int i = 0; spa > i; i++; ) {
+        			System.out.println("bitte spieler namen angeben");
+        			System.out.println("Spieler " + "i :");
+        			String spn = new String(sc.next());
+        			ArrayList<> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrayes zu erstellen
+        			
+        		}
+        		
+        		
         		
         		// hier muss man dann das spiel initialisieren, also jedem 
         		// spieler die ihm zustehendem karten geben.
