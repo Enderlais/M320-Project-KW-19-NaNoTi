@@ -30,5 +30,6 @@ public class Karten {
 		r = Stuck;
 		
 	}
+	
 }
 
