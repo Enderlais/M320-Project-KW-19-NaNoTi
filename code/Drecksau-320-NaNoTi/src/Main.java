@@ -6,7 +6,7 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
-        System.out.println("Wilkommen zu unserem Dreckssau Text-Spiel");
+        System.out.println("Willkommen zu unserem Dreckssau Text-Spiel");
         
         System.out.println("initializing.");
         
@@ -61,45 +61,60 @@ public class Main {
         System.out.print("..");
         
         while(true) {
-        	System.out.println("Wollen Sie eine runde spielen");
-        	System.out.println("0 = nein");
-        	System.out.println("1 = ja");
+        	System.out.println("Wollen Sie eine runde spielen? (j/n)");
         	
-        	int awn = 0;
-        	awn = sc.nextInt();
+        	String awn = sc.nextLine();
         	
-        	if(awn == 1) {
+        	if(awn.equals("j")) {
         		System.out.println("Okay :)");
         		
-        		System.out.println("Spieler anzahl bitte angeben :");
+        		System.out.println("Bitte Spieleranzahl eingeben :");
         		
-        		int spa = sc.nextInt();   // spa ist spieler anzahl
+        		int spa = sc.nextInt();   // spa ist Spieleranzahl
 
         		int i = 0;
         		while(spa > i) {
         			System.out.println("Bitte Spieler namen angeben");
-        			System.out.println("Spieler " + "i :");
-        			String spn = new String(sc.next());
-        			ArrayList<> "spnList" + i = new ArrayList<>();   //spn list name als increment machen um variable menge arrayes zu erstellen
+        			System.out.println("Spieler " + i + 1 + " : " );
+                    ArrayList<String> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrays zu erstellen
+                    String spn = sc.nextLine();
+                    spnList.add(spn);
+                    System.out.println(spnList);
+
+
         			
         			System.out.println("erfolgreich registriert!");
+                    if (i == spa) {
+                        System.out.println("Alle Spieler erfolgreich registriert.");
+                        System.out.println("Wollen Sie die jetzige Spielerliste ansehen? (j/n)");
+                        String spListshow = new String(sc.next());
+                        if (spListshow.equals("j")) {
+
+
+                        } else if (spListshow.equals("n")) {
+
+                        }
+                    }
         		}
         		
         		
         		
-        		// hier muss man dann das spiel initialisieren, also jedem 
+        		// hier muss man dann das Spiel initialisieren, also jedem
         		// spieler die ihm zustehendem karten geben.
         		// bei 2 sind das 5 schweine, 3 = 4, 4 = 3
-        		//hier muessen auch 3 random aktions karten ausgeteilt werden.
+        		//hier müssen auch 3 random aktions karten ausgeteilt werden.
         		// der rest der karten muss auf einen ablagestapel
         		// alle schweine-attribute auf 0 setzen
-        		
-        		
-        		
-        		
-        		
-        	}
-        	
+
+
+
+
+
+        	} else if (awn.equals("n")) {
+                System.out.println(":(");
+                break;
+            }
+
         }
         
 	}
