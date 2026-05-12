@@ -1,33 +1,33 @@
 
 public class Karten {
-	private String Name;
-	private int Stuck;
+	private String name;
+	private int stuck;
 
 	
 	
-	Karten(String Name, int Stuck) {
-		this.Name = Name;
-		this.Stuck = Stuck;
+	Karten(String name, int Stuck) {
+		this.name = name;
+		this.stuck = Stuck;
 		}
 	
 	String GetName() {
-		return Name;
+		return name;
 		
 	}
 	
 	int GetStuck() {
-		return Stuck;
+		return stuck;
 		
 	}
 	
 	
-	void setName(String Na) {
-		Name = Na;
+	void setName(String na) {
+		name = na;
 		
 	}
 	
 	void setStuck(int r) {
-		r = Stuck;
+		r = stuck;
 		
 	}
 	

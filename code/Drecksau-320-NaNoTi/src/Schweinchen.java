@@ -1,13 +1,13 @@
 
 public class Schweinchen {
 private boolean drecking;
-private boolean Hausbesitzer;
+private boolean hausbesitzer;
 private boolean blitzableiter;
 private boolean verschlossen;
 
 Schweinchen(boolean drecking, boolean Hausbesitzer, boolean blitzableiter, boolean verschlossen){
 	this.drecking = drecking; 
-	this.Hausbesitzer = Hausbesitzer;
+	this.hausbesitzer = Hausbesitzer;
 	this.blitzableiter = blitzableiter;
 	this.verschlossen = verschlossen;
 	}
@@ -18,7 +18,7 @@ boolean GetDrecking() {
 }
 
 boolean GetHausbesitzer() {
-	return 	this.Hausbesitzer;
+	return 	this.hausbesitzer;
 	
 }
 
@@ -29,6 +29,30 @@ boolean GetBlitzableiter() {
 
 boolean GetVerschlossen() {
 	return 	this.verschlossen;
+	
+}
+
+public void SetDrecking(boolean e) {
+	
+	drecking = e;
+	
+}
+
+void SetHausbesitzer(boolean f) {
+	
+	hausbesitzer = f;
+	
+}
+
+void SetBlitzableiter(boolean g) {
+	
+	blitzableiter = g;
+	
+}
+
+void SetVerschlossen(boolean h) {
+	
+	verschlossen = h;
 	
 }
 
