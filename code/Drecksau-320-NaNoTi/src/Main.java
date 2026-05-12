@@ -8,6 +8,58 @@ public class Main {
 		
         System.out.println("Wilkommen zu unserem Dreckssau Text-Spiel");
         
+        System.out.println("initializing.");
+        
+        
+        try {
+  		  Thread.sleep(90);
+  		} catch (InterruptedException e) {
+  		  Thread.currentThread().interrupt();
+  		}
+        
+        
+        System.out.print(".");
+        
+        try {
+  		  Thread.sleep(400);
+  		} catch (InterruptedException e) {
+  		  Thread.currentThread().interrupt();
+  		}
+        
+        System.out.print("...");
+        
+        try {
+  		  Thread.sleep(60);
+  		} catch (InterruptedException e) {
+  		  Thread.currentThread().interrupt();
+  		}
+        
+        System.out.print(".");
+        
+        try {
+  		  Thread.sleep(300);
+  		} catch (InterruptedException e) {
+  		  Thread.currentThread().interrupt();
+  		}
+        
+        System.out.print(".");
+        
+        try {
+  		  Thread.sleep(1000);
+  		} catch (InterruptedException e) {
+  		  Thread.currentThread().interrupt();
+  		}
+        
+        System.out.print("....");
+        
+        try {
+  		  Thread.sleep(190);
+  		} catch (InterruptedException e) {
+  		  Thread.currentThread().interrupt();
+  		}
+        
+        System.out.print("..");
+        
         while(true) {
         	System.out.println("Wollen Sie eine runde spielen");
         	System.out.println("0 = nein");
@@ -23,13 +75,14 @@ public class Main {
         		
         		int spa = sc.nextInt();   // spa ist spieler anzahl
 
-        		
-        		while(int i = 0; spa > i; i++; ) {
+        		int i = 0;
+        		while(spa > i) {
         			System.out.println("Bitte Spieler namen angeben");
         			System.out.println("Spieler " + "i :");
         			String spn = new String(sc.next());
-        			ArrayList<> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrayes zu erstellen
+        			ArrayList<> "spnList" + i = new ArrayList<>();   //spn list name als increment machen um variable menge arrayes zu erstellen
         			
+        			System.out.println("erfolgreich registriert!");
         		}
         		
         		
