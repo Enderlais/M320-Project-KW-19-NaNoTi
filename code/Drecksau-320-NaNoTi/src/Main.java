@@ -58,7 +58,7 @@ public class Main {
   		  Thread.currentThread().interrupt();
   		}
         
-        System.out.print("..");
+        System.out.println("..");
         
         while(true) {
         	System.out.println("Wollen Sie eine runde spielen? (j/n)");
