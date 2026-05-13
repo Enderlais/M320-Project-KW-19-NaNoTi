@@ -86,7 +86,7 @@ public class Main {
                     if(spn.isEmpty()) {   
                     	System.out.println("kann nicht leer sein");
                     	  spn = sc.nextLine();
-                    }else {if(spn.isEmpty())  System.out.println("kann nicht leer sein");
+                    }else {if(spn.isEmpty())  System.out.println("kann nicht nur leerschlege  sein");
                     spn = sc.nextLine();}
                
                     
