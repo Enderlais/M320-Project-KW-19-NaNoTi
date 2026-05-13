@@ -36,6 +36,8 @@ public class Main {
         
         System.out.print(".");
         
+        ArrayList<String> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrays zu erstellen
+        
         try {
   		  Thread.sleep(300);
   		} catch (InterruptedException e) {
@@ -72,17 +74,27 @@ public class Main {
         		
         		int spa = sc.nextInt();   // spa ist Spieleranzahl
 
+        		int b = 0;
         		int i = 0;
         		while(spa > i) {
         			System.out.println("Bitte Spieler namen angeben");
-        			System.out.println("Spieler " + i + 1 + " : " );
-                    ArrayList<String> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrays zu erstellen
+        			b = i + 1;
+        			System.out.println("Spieler " + b + " : " );
+                   
                     String spn = sc.nextLine();
-                    spnList.add(spn);
+                    
+                    if(spn.isEmpty()) {   
+                    	System.out.println("kann nicht leer sein");
+                    	  spn = sc.nextLine();
+                    }else {if(spn.isBlank())  System.out.println("kann nicht leer sein");
+                    spn = sc.nextLine();}
+               
+                    
+                 spnList.add(spn);            //  Spieler spn = new Spieler(spn);
                     System.out.println(spnList);
 
 
-        			
+        			i++;
         			System.out.println("erfolgreich registriert!");
                     if (i == spa) {
                         System.out.println("Alle Spieler erfolgreich registriert.");

@@ -1,13 +1,13 @@
 
-public class Karten {
+public abstract class Karten {
 	private String name;
 	private int stuck;
 
 	
 	
-	Karten(String name, int Stuck) {
+	Karten(String name, int stuck) {
 		this.name = name;
-		this.stuck = Stuck;
+		this.stuck = stuck;
 		}
 	
 	String GetName() {

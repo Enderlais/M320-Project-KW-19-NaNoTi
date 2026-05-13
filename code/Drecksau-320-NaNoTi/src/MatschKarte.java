@@ -1,8 +1,11 @@
 
-public class Matsch {
+public class MatschKarte extends Karten {
 private boolean i;
 	
-	
+MatschKarte(String name, int stuck) {
+	 super(name, stuck);
+	 
+	}	
 	
 	
 	

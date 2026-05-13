@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Spieler {
 
     private String spname;
@@ -8,6 +10,7 @@ public class Spieler {
     Spieler(String spname) {
         this.spname = spname;
 
+                                               //  ArrayList<String> spnList = new ArrayList<>();
     }
 
     String Getspname() {
@@ -17,4 +20,8 @@ public class Spieler {
 
     public String printspieler(String spnList) {return spname;}
 
+    
+    
+    
+    
 }
