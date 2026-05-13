@@ -9,8 +9,8 @@ MatschKarte(String name, int stuck) {
 	
 	
 	
-	public void Drekifizierung() {
-		// Schweinchen.SetDrecking(true);																	// dann set dreckig auf 0
+	public void Drekifizierung(String Schw) {
+	//	Schweinchen(schw).SetDrecking(true);																	// dann set dreckig auf 0
 		
 		
 	}
