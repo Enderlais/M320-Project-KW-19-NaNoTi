@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections; //fürs shuffling
 public class KartenDeck {
-
+int i = 0;
     private ArrayList<Karten> ziehstapel;
     private ArrayList<Karten> ablagestapel;
 
@@ -11,14 +11,27 @@ public class KartenDeck {
 
         //Platz für die:
         kartenErstellen();
-        mischen();
+        mischen();                
     }
 
     public void kartenErstellen() {
-        ziehstapel.add(new BlitzKarte("Blitz", 1));
-        ziehstapel.add(new MatschKarte("Matsch", 1));
+    	while( i != 4 ) {
+    	ziehstapel.add(new BlitzKarte("Blitz", 1));
+    	}
+    	i = 0;
+    	while( i != 21 ) {
+        ziehstapel.add(new MatschKarte("Matsch", i + 1));
+        i++;
+    	}
+    	 i = 0;
+    	// original ohne while mit 1 anstatt i
+    	while( i != 4 ) {
         ziehstapel.add(new RegenKarte("Regen", 1));
+    	}
+    	i = 0;
+    	while( i != 9 ) {
         ziehstapel.add(new HausKarte("Haus", 1, false, false, false));
+    	}
     }
 
     public void mischen() {
