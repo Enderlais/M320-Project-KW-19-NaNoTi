@@ -39,8 +39,6 @@ public class Main {
 
         System.out.print(".");
 
-        ArrayList<Spieler> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrays zu erstellen
-
         try {
             sleep(300);
         } catch (InterruptedException e) {
@@ -98,39 +96,21 @@ public class Main {
 
                     int i = 0;
 
-                    while (spa > i) {
+                    Spiel spiel = new Spiel();
 
-                        System.out.println("Bitte Spieler namen angeben");
-                        System.out.println("Spieler " + (i + 1) + " : ");
+                    ArrayList<Spieler> spnList = spiel.spielerInitialisieren(spa, sc);
 
-                        String spn = sc.nextLine();
 
-                        if (spn.trim().isEmpty()) {
-                            System.out.println("Name kann nicht leer sein");
-                            continue;
-                        }
+                    System.out.println("Alle Spieler erfolgreich registriert.");
 
-                        Spieler spn1 = new Spieler(spn);
-                        spnList.add(spn1);
+                    System.out.println("Wollen Sie die jetzige Spielerliste ansehen? (j/n)");
+                    String spListshow = sc.nextLine();
 
-                        i++;
-
-                        System.out.println("erfolgreich registriert!");
+                    if (spListshow.equalsIgnoreCase("j")) {
                         System.out.println(spnList);
                     }
 
-
-                    if (i == spa) {
-                        System.out.println("Alle Spieler erfolgreich registriert.");
-                        System.out.println("Wollen Sie die jetzige Spielerliste ansehen? (j/n)");
-                        String spListshow = sc.nextLine();
-                        if (spListshow.equalsIgnoreCase("j")) {
-                            System.out.println(spnList);
-                            System.out.println("Spiel start!");
-                        } else if (spListshow.equalsIgnoreCase("n")) {
-                            System.out.println("Spiel start!");
-                        }
-                    }
+                    System.out.println("Spiel start!");
 
                     int runde = 1;
                     boolean spiellauf = true;
