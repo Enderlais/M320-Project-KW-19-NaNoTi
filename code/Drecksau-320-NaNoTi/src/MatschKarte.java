@@ -1,4 +1,3 @@
-import package.Schweinchen;
 public class MatschKarte extends Karten {
 private boolean i;
 	
