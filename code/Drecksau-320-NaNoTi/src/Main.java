@@ -110,6 +110,27 @@ public class Main {
                         System.out.println(spnList);
                     }
 
+
+                    if (i == spa) {
+                        System.out.println("Alle Spieler erfolgreich registriert.");
+                        System.out.println("Wollen Sie die jetzige Spielerliste ansehen? (j/n)");
+                        String spListshow = sc.nextLine();
+                        if (spListshow.equalsIgnoreCase("j")) {
+                            System.out.println(spnList);
+                            System.out.println("Spiel start!");
+                          
+                            try {
+                                sleep(1000);
+                            } catch (InterruptedException e) {
+                                Thread.currentThread().interrupt();
+                            }   
+                            
+                            
+                            
+                        } else if (spListshow.equalsIgnoreCase("n")) {
+                            System.out.println("Spiel start!");
+                        }
+                    }
                     System.out.println("Spiel start!");
 
                     int runde = 1;
@@ -121,6 +142,11 @@ public class Main {
                         System.out.println("Runde " + runde);
                         System.out.println("==========");
 
+                        try {
+                            sleep(250);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
 
                         for (Spieler spieler : spnList) {
 
