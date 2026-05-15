@@ -150,6 +150,11 @@ public class Main {
                         System.out.println("Runde " + runde);
                         System.out.println("==========");
 
+                        try {
+                            sleep(250);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
 
                         for (Spieler spieler : spnList) {
 
