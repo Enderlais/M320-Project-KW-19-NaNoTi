@@ -127,6 +127,15 @@ public class Main {
                         if (spListshow.equalsIgnoreCase("j")) {
                             System.out.println(spnList);
                             System.out.println("Spiel start!");
+                          
+                            try {
+                                sleep(1000);
+                            } catch (InterruptedException e) {
+                                Thread.currentThread().interrupt();
+                            }   
+                            
+                            
+                            
                         } else if (spListshow.equalsIgnoreCase("n")) {
                             System.out.println("Spiel start!");
                         }
