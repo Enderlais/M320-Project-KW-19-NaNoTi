@@ -3,15 +3,13 @@ private boolean i;
 	
 MatschKarte(String name, int stuck) {
 	 super(name, stuck);
-	 
-	}	
-	
-	
-	
-	public void Drekifizierung(String Schw) {
-	//	Schweinchen.SetDrecking(true);																	// dann set dreckig auf 0
-		
-		
 	}
+
+    @Override
+    public void benutzen() {
+        //	Schweinchen.SetDrecking(true);	// dann set dreckig auf 0
+        System.out.println("Ein Schwein wurde dreckig!");
+
+    }
 
 }

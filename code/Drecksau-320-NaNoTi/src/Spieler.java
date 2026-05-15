@@ -2,23 +2,16 @@ public class Spieler {
 
     String spname;
 
-
-
-
-    Spieler() {
-
-        //  ArrayList<String> spnList = new ArrayList<>();
+    Spieler(String name) {
+        spname = name;
     }
 
     String Getspname() {
         return spname;
-
     }
 
-    public String printout(String spnList) {return spname;}
-
-    
-    
-    
-    
+    @Override
+    public String toString() {
+        return spname;
+    }
 }

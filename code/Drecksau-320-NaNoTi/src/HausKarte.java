@@ -1,58 +1,48 @@
 
 public class HausKarte extends Karten {
-private boolean geblitzt;
-private boolean blitzstange;
-private boolean verschlossen;
+    private boolean geblitzt;
+    private boolean blitzstange;
+    private boolean verschlossen;
+
 	HausKarte(String name, int stuck, boolean blitzstange, boolean geblitzt, boolean verschlossen){
 		super(name, stuck);
 		this.geblitzt = geblitzt;
 		this.blitzstange = blitzstange;
+        this.verschlossen = verschlossen;
 	}
 	
+    //getters
 	
-	
-	
-	//getters
-	
-	public boolean GetVerschlossen() {
-		return verschlossen;
-		
+	public boolean getVerschlossen() {
+        return verschlossen;
 	}
 	
-	public boolean GetBlitzerstange() {
+	public boolean getBlitzerstange() {
 		return blitzstange;
-		
 	}
 	
-	public boolean GetGeblitzt() {
+	public boolean getGeblitzt() {
 		return geblitzt;
-		
 	}
-	
-	
-	
+
 	//setters
-	
-	
-	public void SetVerschlossen(boolean e) {
-		
+
+	public void setVerschlossen(boolean e) {
 		verschlossen = e;
-		
 	}
 	
-	public void SetBlizerstange(boolean e) {
-		
+	public void setBlitzerstange(boolean e) {
 		blitzstange = e;
-		
 	}
 	
-	public void SetGeblitzt(boolean e) {
-		
+	public void setGeblitzt(boolean e) {
 		geblitzt = e;
-		
 	}
 
-	
+    @Override
+    public void benutzen() {
 
-	
+        System.out.println("Ein Stall wurde gebaut!");
+
+    }
 }

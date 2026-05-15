@@ -39,7 +39,7 @@ public class Main {
 
         System.out.print(".");
 
-        ArrayList<String> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrays zu erstellen
+        ArrayList<Spieler> spnList = new ArrayList<>();   //spn list name als increment machen um variable menge arrays zu erstellen
 
         try {
             sleep(300);
@@ -110,10 +110,8 @@ public class Main {
                             continue;
                         }
 
-                        Spieler spn1 = new Spieler();
-                        spn1.spname = spn;
-
-                        spnList.add(spn);
+                        Spieler spn1 = new Spieler(spn);
+                        spnList.add(spn1);
 
                         i++;
 
@@ -144,12 +142,20 @@ public class Main {
                         System.out.println("==========");
 
 
-                        for (String spieler : spnList) {
+                        for (Spieler spieler : spnList) {
 
                             System.out.println();
-                            System.out.println(spieler + " ist am dran!");
+                            System.out.println(spieler + " ist dran!");
 
-                            // HIER kommen später Aktionen
+                            KartenDeck deck = new KartenDeck();
+
+                            Karten k = deck.ziehen();
+
+                            System.out.println("Gezogene Karte: " + k.getKartenname());
+
+                            k.benutzen();
+
+                            deck.ablegen(k);
                             // Karte ziehen
                             // Schwein waschen
                             // Stall bauen
@@ -157,14 +163,13 @@ public class Main {
 
                             System.out.println("Zug beendet.");
 
-                            // Beispiel Endgame
-                            // if (spielerHatGewonnen)
-                            // {
-                            //     spielLäuft = false;
-                            //     break;
-                            // }
+                            /* Beispiel Endgame
+                            if (spielerHatGewonnen) {
+                                spielLäuft = false;
+                                break;
+                            }
+                            */
                         }
-
                         runde++;
                     }
 
