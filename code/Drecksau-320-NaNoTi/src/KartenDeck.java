@@ -16,7 +16,7 @@ int i = 0;
 
     public void kartenErstellen() {
     	while( i != 4 ) {
-    	ziehstapel.add(new BlitzKarte("Blitz", 1));
+    	ziehstapel.add(new BlitzKarte("Blitz", i + 1));
     	}
     	i = 0;
     	while( i != 21 ) {
@@ -26,12 +26,23 @@ int i = 0;
     	 i = 0;
     	// original ohne while mit 1 anstatt i
     	while( i != 4 ) {
-        ziehstapel.add(new RegenKarte("Regen", 1));
+        ziehstapel.add(new RegenKarte("Regen", i + 1));
     	}
     	i = 0;
     	while( i != 9 ) {
-        ziehstapel.add(new HausKarte("Haus", 1, false, false, false));
+        ziehstapel.add(new HausKarte("Haus", i + 1, false, false, false));
     	}
+    	i = 0;
+    	while( i != 8 ) {
+        ziehstapel.add(new WaschKarte("Wasch", i + 1));
+    	}
+    	i = 0;
+    	while( i != 4 ) {
+        ziehstapel.add(new VerschlossenKarte("Verschliessen", i + 1));
+    	}
+    	while( i != 4 ) {
+            ziehstapel.add(new BlitzableiterKarte("Blitzableiter", i + 1));
+        	}
     }
 
     public void mischen() {
