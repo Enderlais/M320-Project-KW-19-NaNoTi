@@ -16,7 +16,7 @@ int i = 0;
         mischen();                
     }
 
-    public void kartenErstellen() {
+    public void kartenErstellen() {										
     	while( i != 4 ) {
     	ziehstapel.add(new BlitzKarte("Blitz", i + 1));
     	System.out.println("BlitzKarte Ins Deck geladen " + i);
@@ -108,13 +108,17 @@ int i = 0;
         Collections.shuffle(ziehstapel);    //Mischt die Karten vom Stapel
     }
 
+    
+    
     public Karten ziehen() {
         if (ziehstapel.isEmpty()) {
             ziehstapel = ablagestapel;
             ablagestapel = new ArrayList<>();
             mischen();
         }
-        return ziehstapel.remove(0);
+        Karten bob = ziehstapel.get(0);
+        ziehstapel.remove(0);
+        return bob;            //musst karte  mitgeben und nicht remove.
     }
 
     public void ablegen(Karten karte) {
