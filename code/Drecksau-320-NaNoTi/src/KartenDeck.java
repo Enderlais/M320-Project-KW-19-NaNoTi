@@ -17,32 +17,46 @@ int i = 0;
     public void kartenErstellen() {
     	while( i != 4 ) {
     	ziehstapel.add(new BlitzKarte("Blitz", i + 1));
+    	System.out.println("BlitzKarte Ins Deck geladen " + i);
+    	i++;
     	}
     	i = 0;
     	while( i != 21 ) {
         ziehstapel.add(new MatschKarte("Matsch", i + 1));
+        System.out.println("MatschKarte Ins Deck geladen " + i);
         i++;
     	}
     	 i = 0;
     	// original ohne while mit 1 anstatt i
     	while( i != 4 ) {
         ziehstapel.add(new RegenKarte("Regen", i + 1));
+        System.out.println("RegenKarte Ins Deck geladen " + i);
+        i++;
     	}
     	i = 0;
     	while( i != 9 ) {
         ziehstapel.add(new HausKarte("Haus", i + 1, false, false, false));
+        System.out.println("HausKarte Ins Deck geladen " + i);
+        i++;
     	}
     	i = 0;
     	while( i != 8 ) {
         ziehstapel.add(new WaschKarte("Wasch", i + 1));
+        System.out.println("WaschKarte Ins Deck geladen " + i);
+        i++;
     	}
     	i = 0;
     	while( i != 4 ) {
         ziehstapel.add(new VerschlossenKarte("Verschliessen", i + 1));
+        System.out.println("VerschlossenKarte Ins Deck geladen " + i);
+        i++;
     	}
     	while( i != 4 ) {
             ziehstapel.add(new BlitzableiterKarte("Blitzableiter", i + 1));
+            System.out.println("BlitzableiterKarte Ins Deck geladen " + i);
+            i++;
         	}
+    	System.out.println("alle karten erfolgreich ins deck geladen!");
     }
 
     public void mischen() {
