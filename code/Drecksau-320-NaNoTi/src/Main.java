@@ -124,6 +124,7 @@ public class Main {
                 KartenDeck deck = new KartenDeck();
 
                 deck.kartenErstellen();
+
                 										// press anny key to continue
                 int runde = 1;
 
@@ -132,9 +133,8 @@ public class Main {
                 while (spiellauf = true) {
 
                     System.out.println();
-                    System.out.println("==========");
                     System.out.println("Runde " + runde);
-                    System.out.println("==========");
+                    System.out.println("________");
                     int r = 0;
                      r = (int) Math.random() * 10000;
                     r = r + 150;
