@@ -124,19 +124,21 @@ public class Main {
                 KartenDeck deck = new KartenDeck();
 
                 int runde = 1;
-                int maxRunden = 10;
 
                 boolean spiellauf = true;
 
-                while (spiellauf && runde <= maxRunden) {
+                while (spiellauf = true) {
 
                     System.out.println();
                     System.out.println("==========");
                     System.out.println("Runde " + runde);
                     System.out.println("==========");
-
-                    try {
-                        sleep(50);
+                    int r = 0;
+                     r = (int) Math.random() * 10000;
+                    r = r + 50;
+                     
+                     try {
+                        sleep(r);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
@@ -151,7 +153,7 @@ public class Main {
                         Karten k = deck.ziehen();
 
                         System.out.println("Gezogene Karte: " + k.getKartenname());
-
+                        																//Hier aktionen einfuegen u karten hand anzeigen.j
                         k.benutzen();
 
                         deck.ablegen(k);

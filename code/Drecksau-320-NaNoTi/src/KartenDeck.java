@@ -1,3 +1,5 @@
+import static java.lang.Thread.sleep;
+import java.lang.Math;
 import java.util.ArrayList;
 import java.util.Collections; //fürs shuffling
 public class KartenDeck {
@@ -25,6 +27,13 @@ int i = 0;
         ziehstapel.add(new MatschKarte("Matsch", i + 1));
         System.out.println("MatschKarte Ins Deck geladen " + i);
         i++;
+        int r = (int) Math.random() * 10000;
+        try {
+            sleep(r);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        
     	}
     	 i = 0;
     	// original ohne while mit 1 anstatt i
@@ -32,29 +41,59 @@ int i = 0;
         ziehstapel.add(new RegenKarte("Regen", i + 1));
         System.out.println("RegenKarte Ins Deck geladen " + i);
         i++;
+        int r = (int) Math.random() * 10000;
+        try {
+            sleep(r);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     	}
     	i = 0;
     	while( i != 9 ) {
         ziehstapel.add(new HausKarte("Haus", i + 1, false, false, false));
         System.out.println("HausKarte Ins Deck geladen " + i);
         i++;
+        int r = (int) Math.random() * 10000;
+        try {
+            sleep(r);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     	}
     	i = 0;
     	while( i != 8 ) {
         ziehstapel.add(new WaschKarte("Wasch", i + 1));
         System.out.println("WaschKarte Ins Deck geladen " + i);
         i++;
+        int r = (int) Math.random() * 10000;
+        try {
+            sleep(r);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     	}
     	i = 0;
     	while( i != 4 ) {
         ziehstapel.add(new VerschlossenKarte("Verschliessen", i + 1));
         System.out.println("VerschlossenKarte Ins Deck geladen " + i);
         i++;
+        int r = (int) Math.random() * 10000;
+        try {
+            sleep(r);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     	}
     	while( i != 4 ) {
             ziehstapel.add(new BlitzableiterKarte("Blitzableiter", i + 1));
             System.out.println("BlitzableiterKarte Ins Deck geladen " + i);
             i++;
+            int r = (int) Math.random() * 10000;
+            try {
+                sleep(r);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         	}
     	System.out.println("alle karten erfolgreich ins deck geladen!");
     }
