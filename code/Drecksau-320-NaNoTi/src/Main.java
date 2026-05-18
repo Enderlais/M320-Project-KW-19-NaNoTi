@@ -123,6 +123,8 @@ public class Main {
                 // Kartendeck nur EINMAL erstellen
                 KartenDeck deck = new KartenDeck();
 
+                deck.kartenErstellen();
+                										// press anny key to continue
                 int runde = 1;
 
                 boolean spiellauf = true;
@@ -135,7 +137,7 @@ public class Main {
                     System.out.println("==========");
                     int r = 0;
                      r = (int) Math.random() * 10000;
-                    r = r + 50;
+                    r = r + 150;
                      
                      try {
                         sleep(r);

@@ -28,6 +28,7 @@ int i = 0;
         System.out.println("MatschKarte Ins Deck geladen " + i);
         i++;
         int r = (int) Math.random() * 10000;
+        r = r + 200;
         try {
             sleep(r);
         } catch (InterruptedException e) {
@@ -42,6 +43,7 @@ int i = 0;
         System.out.println("RegenKarte Ins Deck geladen " + i);
         i++;
         int r = (int) Math.random() * 10000;
+        r = r + 200;
         try {
             sleep(r);
         } catch (InterruptedException e) {
@@ -54,6 +56,7 @@ int i = 0;
         System.out.println("HausKarte Ins Deck geladen " + i);
         i++;
         int r = (int) Math.random() * 10000;
+        r = r + 200;
         try {
             sleep(r);
         } catch (InterruptedException e) {
@@ -66,6 +69,7 @@ int i = 0;
         System.out.println("WaschKarte Ins Deck geladen " + i);
         i++;
         int r = (int) Math.random() * 10000;
+        r = r + 200;
         try {
             sleep(r);
         } catch (InterruptedException e) {
@@ -78,6 +82,7 @@ int i = 0;
         System.out.println("VerschlossenKarte Ins Deck geladen " + i);
         i++;
         int r = (int) Math.random() * 10000;
+        r = r + 200;
         try {
             sleep(r);
         } catch (InterruptedException e) {
@@ -89,6 +94,7 @@ int i = 0;
             System.out.println("BlitzableiterKarte Ins Deck geladen " + i);
             i++;
             int r = (int) Math.random() * 10000;
+            r = r + 200;
             try {
                 sleep(r);
             } catch (InterruptedException e) {
