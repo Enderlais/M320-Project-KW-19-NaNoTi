@@ -13,7 +13,7 @@ public class Spieler {
     	 ArrayList<Karten> hand = new ArrayList<>();
     	 
     	 while(hand.size() != 3) {
-    	hand.add(deck.ziehen());                   //geht ned
+             hand.add(deck.ziehen());                   //geht ned
     	 }
     }
     
