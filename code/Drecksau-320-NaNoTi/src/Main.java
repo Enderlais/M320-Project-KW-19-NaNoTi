@@ -134,7 +134,7 @@ public class Main {
 
                     System.out.println();
                     System.out.println("Runde " + runde);
-                    System.out.println("________");
+                    System.out.println("_____");
                     int r = 0;
                      r = (int) Math.random() * 10000;
                     r = r + 150;

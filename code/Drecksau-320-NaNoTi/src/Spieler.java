@@ -8,7 +8,7 @@ public class Spieler {
         spname = name;
     }
 
-    public void InitHand() {
+    public void InitHand(KartenDeck deck) {
     	
     	 ArrayList<Karten> hand = new ArrayList<>();
     	 
