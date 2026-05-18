@@ -102,6 +102,8 @@ int i = 0;
             }
         	}
     	System.out.println("alle karten erfolgreich ins deck geladen!");
+    	
+    	mischen();
     }
 
     public void mischen() {
