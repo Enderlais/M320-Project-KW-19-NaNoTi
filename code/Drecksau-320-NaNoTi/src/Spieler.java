@@ -10,10 +10,10 @@ public class Spieler {
 
     public void InitHand() {
     	
-    	 ArrayList<Karten> Hand = new ArrayList<>();
+    	 ArrayList<Karten> hand = new ArrayList<>();
     	 
-    	 while(Hand.size() != 3) {
-    	Hand.add(deck.ziehen());                   //geht ned
+    	 while(hand.size() != 3) {
+    	hand.add(deck.ziehen());                   //geht ned
     	 }
     }
     
