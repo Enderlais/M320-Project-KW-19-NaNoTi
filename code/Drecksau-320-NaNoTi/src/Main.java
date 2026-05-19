@@ -2,7 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
-
+//=================================================================================
+//                      Main Methode
+//=================================================================================
 public class Main {
 
     public static void main(String[] args) {
