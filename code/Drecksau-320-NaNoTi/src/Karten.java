@@ -1,35 +1,28 @@
+public abstract class Karten {
 
-public class Karten {
-	private String Name;
-	private int Stuck;
+	String kartenname;
+	private int stuck;
 
-	
-	
-	Karten(String Name, int Stuck) {
-		this.Name = Name;
-		this.Stuck = Stuck;
+	Karten(String name, int stuck) {
+		this.kartenname = name;
+		this.stuck = stuck;
 		}
 	
-	String GetName() {
-		return Name;
-		
+	String getKartenname() {
+		return kartenname;
 	}
 	
-	int GetStuck() {
-		return Stuck;
-		
+	int getStuck() {
+		return stuck;
+	}
+
+	void setKartenname(String kna) {
+		kartenname = kna;
 	}
 	
-	
-	void setName(String Na) {
-		Name = Na;
-		
+	void setStuck(int stuck) {
+		this.stuck = stuck;
 	}
-	
-	void setStuck(int r) {
-		r = Stuck;
-		
-	}
-	
+    public abstract void benutzen();    //GANZ WICHTIG: Damit alle Unterklassen ihre eigene benutzen() Methode haben
 }
 

@@ -1,107 +1,208 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import static java.lang.Thread.sleep;
+
 public class Main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-		
-        System.out.println("Wilkommen zu unserem Dreckssau Text-Spiel");
-        
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Spieler> spnList = new ArrayList<>();
+
+        System.out.println("Willkommen zu unserem Dreckssau Text-Spiel");
+
         System.out.println("initializing.");
-        
-        
-        try {
-  		  Thread.sleep(90);
-  		} catch (InterruptedException e) {
-  		  Thread.currentThread().interrupt();
-  		}
-        
-        
-        System.out.print(".");
-        
-        try {
-  		  Thread.sleep(400);
-  		} catch (InterruptedException e) {
-  		  Thread.currentThread().interrupt();
-  		}
-        
-        System.out.print("...");
-        
-        try {
-  		  Thread.sleep(60);
-  		} catch (InterruptedException e) {
-  		  Thread.currentThread().interrupt();
-  		}
-        
-        System.out.print(".");
-        
-        try {
-  		  Thread.sleep(300);
-  		} catch (InterruptedException e) {
-  		  Thread.currentThread().interrupt();
-  		}
-        
-        System.out.print(".");
-        
-        try {
-  		  Thread.sleep(1000);
-  		} catch (InterruptedException e) {
-  		  Thread.currentThread().interrupt();
-  		}
-        
-        System.out.print("....");
-        
-        try {
-  		  Thread.sleep(190);
-  		} catch (InterruptedException e) {
-  		  Thread.currentThread().interrupt();
-  		}
-        
-        System.out.print("..");
-        
-        while(true) {
-        	System.out.println("Wollen Sie eine runde spielen");
-        	System.out.println("0 = nein");
-        	System.out.println("1 = ja");
-        	
-        	int awn = 0;
-        	awn = sc.nextInt();
-        	
-        	if(awn == 1) {
-        		System.out.println("Okay :)");
-        		
-        		System.out.println("Spieler anzahl bitte angeben :");
-        		
-        		int spa = sc.nextInt();   // spa ist spieler anzahl
 
-        		int i = 0;
-        		while(spa > i) {
-        			System.out.println("Bitte Spieler namen angeben");
-        			System.out.println("Spieler " + "i :");
-        			String spn = new String(sc.next());
-        			ArrayList<> "spnList" + i = new ArrayList<>();   //spn list name als increment machen um variable menge arrayes zu erstellen
-        			
-        			System.out.println("erfolgreich registriert!");
-        		}
-        		
-        		
-        		
-        		// hier muss man dann das spiel initialisieren, also jedem 
-        		// spieler die ihm zustehendem karten geben.
-        		// bei 2 sind das 5 schweine, 3 = 4, 4 = 3
-        		//hier muessen auch 3 random aktions karten ausgeteilt werden.
-        		// der rest der karten muss auf einen ablagestapel
-        		// alle schweine-attribute auf 0 setzen
-        		
-        		
-        		
-        		
-        		
-        	}
-        	
+        try {
+            sleep(90);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
-        
-	}
 
+        System.out.print(".");
+
+        try {
+            sleep(400);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.print("...");
+
+        try {
+            sleep(60);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.print(".");
+
+        try {
+            sleep(300);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.print(".");
+
+        try {
+            sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.print("....");
+
+        try {
+            sleep(190);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println("..");
+
+        while (true) {
+
+            System.out.println("Wollen Sie eine Runde spielen? (j/n)");
+
+            String awn = sc.nextLine();
+
+            if (awn.equalsIgnoreCase("j")) {
+
+                System.out.println("Okay :)");
+
+                int spa = 0;
+
+                // Spieleranzahl prüfen
+                while (true) {
+
+                    try {
+
+                        System.out.println("Bitte Spieleranzahl eingeben:");
+
+                        spa = sc.nextInt();
+                        sc.nextLine();
+
+                        if (spa >= 2 && spa <= 4) {
+
+                            System.out.println("Spieleranzahl akzeptiert!");
+                            break;
+
+                        } else {
+
+                            System.out.println("Bitte geben Sie eine Spielerzahl zwischen 2 und 4 an");
+                        }
+
+                    } catch (Exception e) {
+
+                        System.out.println("Nur Zahlen erlaubt!");
+                        sc.nextLine();
+                    }
+                }
+
+                // Spieler initialisieren
+                Spiel spiel = new Spiel();
+
+                spnList = spiel.spielerInitialisieren(spa, sc);
+
+                System.out.println("Alle Spieler erfolgreich registriert.");
+
+                System.out.println("Wollen Sie die jetzige Spielerliste ansehen? (j/n)");
+
+                String spListshow = sc.nextLine();
+
+                if (spListshow.equalsIgnoreCase("j")) {
+
+                    System.out.println(spnList);
+                }
+
+                System.out.println("Spiel startet!");
+
+                // Kartendeck nur EINMAL erstellen
+                KartenDeck deck = new KartenDeck();
+
+                deck.kartenErstellen();
+
+                										// press anny key to continue
+                int runde = 1;
+
+                boolean spiellauf = true;
+
+                while (spiellauf = true) {
+
+                    System.out.println();
+                    System.out.println("Runde " + runde);
+                    System.out.println("_____");
+                    int r = 0;
+                     r = (int) Math.random() * 10000;
+                    r = r + 150;
+                     
+                     try {
+                        sleep(r);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+
+                    // Jeder Spieler ist einmal dran
+                    for (Spieler spieler : spnList) {
+
+                        System.out.println();
+
+                        System.out.println(spieler.Getspname() + " ist dran!");
+
+                        Karten k = deck.ziehen();
+
+                        System.out.println("Gezogene Karte: " + k.getKartenname());
+                        System.out.println("Möchten Sie ihre Karte verwenden? (j/n)");
+                        // Hand wird gezeigt
+                        awn = sc.nextLine();
+                        if (awn.equalsIgnoreCase("j")) {
+                            System.out.println("Welche Karte wollen Sie verwenden?");
+                            int cardchoose = sc.nextInt();
+                            if (cardchoose == 1) {
+                                k.benutzen();
+                                deck.ablegen(k);
+                            }
+                            //Hier aktionen einfuegen u karten hand anzeigen.j
+                        } else if (awn.equalsIgnoreCase("n")) {
+
+                        }
+
+
+                        System.out.println("Zug beendet.");
+
+                        /*
+                        Beispiel Wincondition
+
+                        if (spielerHatGewonnen) {
+                            spiellauf = false;
+                            break;
+                        }
+                        */
+                    }
+
+                    runde++;
+                }
+
+                System.out.println();
+                System.out.println("Game Over");
+                System.out.println("Der Gewinner ist: Placeholder!");
+
+                break;
+
+            } else if (awn.equalsIgnoreCase("n")) {
+
+                System.out.println(":(");
+                break;
+
+            } else {
+
+                System.out.println("Ungültige Eingabe");
+            }
+        }
+
+        sc.close();
+    }
 }
