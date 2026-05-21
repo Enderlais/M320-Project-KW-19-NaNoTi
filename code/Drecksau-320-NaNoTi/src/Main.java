@@ -75,8 +75,10 @@ public class Main {
 
                 System.out.println("Okay :)");
 
-                int spa = 0;
+            int spa = 0;													// die muss irgendwie in spieler. jar benutzt werden zb linie 27
 
+                
+                
                 // Spieleranzahl prüfen
                 while (true) {
 
@@ -103,7 +105,8 @@ public class Main {
                         sc.nextLine();
                     }
                 }
-
+                
+             
                 // Spieler initialisieren
                 Spiel spiel = new Spiel();
 
@@ -207,4 +210,8 @@ public class Main {
 
         sc.close();
     }
+    
+ //   public int GetSpa() {
+   // 	return spa;
+  //  }
 }
