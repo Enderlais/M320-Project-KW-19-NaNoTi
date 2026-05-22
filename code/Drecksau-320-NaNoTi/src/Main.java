@@ -114,19 +114,35 @@ public class Main {
                 if (spListshow.equalsIgnoreCase("j")) {
 
                     System.out.println(spnList); //spnList = Spielername Liste
+                    
+                    try {
+                        sleep(3000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                    
+                    
+                    
                 }
 
                 System.out.println("Spiel startet!");
 
                 // Kartendeck nur EINMAL erstellen
                 KartenDeck deck = new KartenDeck();
-
+                int q = 0;
+                 while(q != spa) { r = spnList.get(q);										// muss noch auszihen. um  per spiler hand zu intiialisieren
+                	 q++;
+                 }
+                
+              //  Initschweichen(spa)
 
                 // press anny key to continue
                 int runde = 1;
 
                 boolean spiellauf = true;
 
+                
+                
                 while (spiellauf) {
 
                     System.out.println();
