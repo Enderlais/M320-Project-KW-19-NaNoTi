@@ -112,7 +112,7 @@ public class Main {
 
                 if (spListshow.equalsIgnoreCase("j")) {
 
-                    System.out.println(spnList);
+                    System.out.println(spnList); //spnList = Spielername Liste
                 }
 
                 System.out.println("Spiel startet!");
@@ -122,7 +122,7 @@ public class Main {
 
 
 
-                										// press anny key to continue
+                // press anny key to continue
                 int runde = 1;
 
                 boolean spiellauf = true;
@@ -133,7 +133,7 @@ public class Main {
                     System.out.println("Runde " + runde);
                     System.out.println("_____");
                     int r = 0;
-                     r = (int) Math.random() * 10000;
+                    r = (int) Math.random() * 10000;
                     r = r + 150;
                      
                      try {
