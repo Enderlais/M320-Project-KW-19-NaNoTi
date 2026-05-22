@@ -18,27 +18,25 @@ public class Spieler {
         }
     }
 
- 
-    
-    public void Initschweichen() {
 
-        ArrayList<Schweinchen> sps = new ArrayList<>();                 //sps ist spieler schweinchen
 
-        if (spa = 2) {																														
+    public void Initschweichen(int spa) {
+
+        ArrayList<Schweinchen> sps = new ArrayList<>();
+
+        if (spa == 2) {
             while (sps.size() != 5) {
-                sps.add(new Schweinchen(false, false, false, false));                   //geht doch
+                sps.add(new Schweinchen(false, false, false, false));
+            }
+        } else if (spa == 3) {
+            while (sps.size() != 4) {
+                sps.add(new Schweinchen(false, false, false, false));
+            }
+        } else {
+            while (sps.size() != 3) {
+                sps.add(new Schweinchen(false, false, false, false));
             }
         }
-        else { if(spa = 3) { while (sps.size() != 4) {
-            sps.add(new Schweinchen(false, false, false, false));                   //geht doch
-        }} else {while (sps.size() != 3) {
-            sps.add(new Schweinchen(false, false, false, false));                   //geht doch
-        }  }
-        
-        } 
-    
-    
-    
     }
     
 

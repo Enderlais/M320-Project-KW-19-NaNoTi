@@ -16,87 +16,80 @@ public class Main {
         System.out.println("Willkommen zu unserem Dreckssau Text-Spiel");
 
         System.out.println("initializing.");
+// Punkte animation die Punkte laden mit verzögerung hinein.
+        try {
+            sleep(90);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        System.out.print("..");
 
         try {
             sleep(90);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.print(".");
+        System.out.print("..");
 
         try {
-            sleep(400);
+            sleep(90);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.print("...");
+        System.out.print("..");
 
         try {
-            sleep(60);
+            sleep(90);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.print(".");
+        System.out.print("..");
 
         try {
-            sleep(300);
+            sleep(90);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.print(".");
+        System.out.print("..");
 
         try {
-            sleep(1000);
+            sleep(90);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.print("....");
-
-        try {
-            sleep(190);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-
         System.out.println("..");
 
+        try {
+            sleep(90);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+// Spiel startet
         while (true) {
 
             System.out.println("Wollen Sie eine Runde spielen? (j/n)");
 
             String awn = sc.nextLine();
-
+            // Wenn der user das Spiel startet mit "j" dann beginnt es.
             if (awn.equalsIgnoreCase("j")) {
 
                 System.out.println("Okay :)");
 
-            int spa = 0;													// die muss irgendwie in spieler. jar benutzt werden zb linie 27
-
-                
-                
+            int spa = 0; // Default spieler anzahl ist bei 0. (Wird nacher geändert)												// die muss irgendwie in spieler. jar benutzt werden zb linie 27
                 // Spieleranzahl prüfen
                 while (true) {
-
                     try {
 
                         System.out.println("Bitte Spieleranzahl eingeben:");
 
-                        spa = sc.nextInt();
-                        sc.nextLine();
+                        spa = sc.nextInt(); //Spieleranzahl
+                        sc.nextLine(); // Puffer leeren
 
                         if (spa >= 2 && spa <= 4) {
-
                             System.out.println("Spieleranzahl akzeptiert!");
                             break;
-
                         } else {
-
-                            System.out.println("Bitte geben Sie eine Spielerzahl zwischen 2 und 4 an");
+                            System.out.println("Bitte geben Sie eine Spielerzahl zwischen 2 und 4 an!");
                         }
 
                     } catch (Exception e) {
@@ -105,8 +98,7 @@ public class Main {
                         sc.nextLine();
                     }
                 }
-                
-             
+
                 // Spieler initialisieren
                 Spiel spiel = new Spiel();
 
@@ -128,14 +120,14 @@ public class Main {
                 // Kartendeck nur EINMAL erstellen
                 KartenDeck deck = new KartenDeck();
 
-                deck.kartenErstellen();
+
 
                 										// press anny key to continue
                 int runde = 1;
 
                 boolean spiellauf = true;
 
-                while (spiellauf = true) {
+                while (spiellauf) {
 
                     System.out.println();
                     System.out.println("Runde " + runde);

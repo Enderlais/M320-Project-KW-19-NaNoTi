@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+//================================================================================
+//                          Klasse Spiel
+//===============================================================================
 public class Spiel {
 
     public ArrayList<Spieler> spielerInitialisieren(int anzahl, Scanner sc) {
