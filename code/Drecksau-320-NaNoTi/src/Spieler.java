@@ -1,17 +1,21 @@
 import java.util.ArrayList;
-
+//=================================================================================
+//                      Spieler Klasse
+//=================================================================================
 public class Spieler {
 
-	int spau = 0;
     String spname;
-
+    ArrayList<Karten> hand = new ArrayList<>();
     Spieler(String name) {
         spname = name;
     }
 
-    public void InitHand(KartenDeck deck) {
+    Spieler(String spname, ArrayList<Karten> hand) {
+        this.spname = spname;
+        this.hand = hand;
+    }
 
-        ArrayList<Karten> hand = new ArrayList<>();
+    public void InitHand(KartenDeck deck) {
 
         while (hand.size() != 3) {
             hand.add(deck.ziehen());                   //geht doch
