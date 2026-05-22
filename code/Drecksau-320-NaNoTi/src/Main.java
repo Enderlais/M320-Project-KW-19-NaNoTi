@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
+
 //=================================================================================
 //                      Main Methode
 //=================================================================================
@@ -75,7 +76,7 @@ public class Main {
 
                 System.out.println("Okay :)");
 
-            int spa = 0; // Default spieler anzahl ist bei 0. (Wird nacher geändert)												// die muss irgendwie in spieler. jar benutzt werden zb linie 27
+                int spa = 0; // Default spieler anzahl ist bei 0. (Wird nacher geändert)												// die muss irgendwie in spieler. jar benutzt werden zb linie 27
                 // Spieleranzahl prüfen
                 while (true) {
                     try {
@@ -121,7 +122,6 @@ public class Main {
                 KartenDeck deck = new KartenDeck();
 
 
-
                 // press anny key to continue
                 int runde = 1;
 
@@ -135,8 +135,8 @@ public class Main {
                     int r = 0;
                     r = (int) Math.random() * 10000;
                     r = r + 150;
-                     
-                     try {
+
+                    try {
                         sleep(r);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
@@ -202,8 +202,8 @@ public class Main {
 
         sc.close();
     }
-    
- //   public int GetSpa() {
-   // 	return spa;
-  //  }
+
+    //   public int GetSpa() {
+    // 	return spa;
+    //  }
 }
