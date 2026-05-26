@@ -174,18 +174,15 @@ public class Main {
                         System.out.println("Gezogene Karte: " + k.getKartenname());
                         System.out.println("Möchten Sie ihre Karte verwenden? (j/n)");
                         // Hand wird gezeigt
-                        awn = sc.nextLine();
-                        if (awn.equalsIgnoreCase("j")) {
-                            System.out.println("Welche Karte wollen Sie verwenden?");
+                        
+                        System.out.println("Welche Karte wollen Sie verwenden?");
                             int cardchoose = sc.nextInt();
                             if (cardchoose == 1) {
                                 k.benutzen();
                                 deck.ablegen(k);
                             }
                             //Hier aktionen einfuegen u karten hand anzeigen.j
-                        } else if (awn.equalsIgnoreCase("n")) {
 
-                        }
 
 
                         System.out.println("Zug beendet.");
