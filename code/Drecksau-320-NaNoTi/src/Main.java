@@ -130,8 +130,12 @@ public class Main {
                 // Kartendeck nur EINMAL erstellen
                 KartenDeck deck = new KartenDeck();
                 int q = 0;
-                 while(q != spa) { r = spnList.get(q);										// muss noch auszihen. um  per spiler hand zu intiialisieren
+                 while(q != spa) { 
+                	 Spieler r = new Spieler("placeholder");
+                	 r = spnList.get(q);								//	initialisiert alles fuer den spieler
                 	 q++;
+                	 r.InitSchweichen(spa);
+                	 r.InitHand(deck);
                  }
                 
               //  Initschweichen(spa)
