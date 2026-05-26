@@ -28,7 +28,14 @@ int r = 0;
         }
     }
 
-
+    	public void NachZihen(KartenDeck deck) {
+    		int r = 0;
+    		 while (hand.size() != 3) {
+    	            hand.add(deck.ziehen());   
+    	            System.out.println("Du hast eine " + hand.get(r) + " gezogen :)");
+    	            r++;
+    	        }
+    	}
 
     public void InitSchweichen(int spa) {
 
@@ -55,7 +62,15 @@ int r = 0;
     }
     
 
-        String Getspname () {
+   public Karten GetHandPos(int pos) {
+    	return hand.get(pos);
+    }
+    
+//  public  hand GetHand() {
+   // 	return hand;						//array hand als ruckgabe geht noch ned
+ //   }
+    
+     public   String Getspname () {
             return spname;
         }
 

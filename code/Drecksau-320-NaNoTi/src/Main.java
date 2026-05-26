@@ -163,7 +163,49 @@ public class Main {
                     }
 
                     // Jeder Spieler ist einmal dran
-                    for (Spieler spieler : spnList) {
+          
+                 Spieler jazs = new Spieler("Bob Stadler");    //jazs = jetzidger am zuge spieler
+                 int   jazsz = 0;    //jazs = jetzidger am zuge spieler zahl
+                 
+                    while(jazsz != spa) { 
+                   	 jazs = spnList.get(jazsz);
+                   	  		
+                   	 
+                   	 
+                   	 
+                   	 						//	initialisiert alles fuer den spieler
+              //     	NachZihen(deck);
+                   	jazsz++;
+                   	 
+                    }
+                }}
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    /*   for (Spieler spieler : spnList) {
 
                         System.out.println();
 
@@ -196,7 +238,7 @@ public class Main {
                         }
                         */
                     }
-
+*/*
                     runde++;
                 }
 
