@@ -169,10 +169,14 @@ public class Main {
                  
                     while(jazsz != spa) { 
                    	 jazs = spnList.get(jazsz);
-                   	  		
+                   	  		System.out.println("spieler " + jazs + " am zuge!");
                    	 
+                   	 jazs.NachZihen(deck);
                    	 
-                   	 
+                   	 System.out.println("dein volles deck : " + jazs.hand);
+                   	 System.out.println("welche karte willst du spielen?");
+                   	 int jzskw = sc.nextInt();               	 //  jzskw    jetzt zu spielende karte wahl
+                   	  Karten jzsk = jazs.GetHandPos(jzskw);			 //  jzsk     jetzt zu spielende karte             in spieler muss hand gettergemacht werder
                    	 						//	initialisiert alles fuer den spieler
               //     	NachZihen(deck);
                    	jazsz++;
