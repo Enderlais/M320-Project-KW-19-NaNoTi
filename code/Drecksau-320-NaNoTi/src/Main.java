@@ -178,7 +178,11 @@ public class Main {
                    	jazsz++;
                    	 
                     }
-                }}
+                }
+            }
+        }
+    }
+}
                     
                     
                     
@@ -237,8 +241,8 @@ public class Main {
                             break;
                         }
                         */
-                    }
-*/*
+
+/*
                     runde++;
                 }
 
@@ -266,3 +270,4 @@ public class Main {
     // 	return spa;
     //  }
 }
+*/
