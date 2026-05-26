@@ -168,17 +168,34 @@ public class Main {
                  int   jazsz = 0;    //jazs = jetzidger am zuge spieler zahl
                  
                     while(jazsz != spa) { 
-                   	 jazs = spnList.get(jazsz);
+                    	 int jzskw = 0;
+                   	 jazs = spnList.get(jazsz);   										  //  jzsk     jetzt zu spielende karte    
                    	  		System.out.println("spieler " + jazs + " am zuge!");
                    	 
                    	 jazs.NachZihen(deck);
                    	 
                    	 System.out.println("dein volles deck : " + jazs.hand);
                    	 System.out.println("welche karte willst du spielen?");
-                   	 int jzskw = sc.nextInt();               	 //  jzskw    jetzt zu spielende karte wahl
-                   	  Karten jzsk = jazs.GetHandPos(jzskw);			 //  jzsk     jetzt zu spielende karte             in spieler muss hand gettergemacht werder
-                   	 						//	initialisiert alles fuer den spieler
-              //     	NachZihen(deck);
+                   	 boolean bernt = true;
+                   	 while(bernt == true) { 
+                   		
+                   	 jzskw = sc.nextInt() - 1;               	 //  jzskw    jetzt zu spielende karte wahl
+                   	if ( jzskw >= -1 ||  jzskw <= 4) {System.out.println("invalide eingabe, bitte zahl zwischen 1 ~ 3 eingeben");}				// korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
+                   	else {bernt = false;}
+                   	 } 
+                   	 Karten jzsk = jazs.GetHandPos(jzskw);		              //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck
+                   	  System.out.println(jzsk + "test Output 1");                //test / debug
+                   	  jazs.hand.remove(jzskw);
+                   	 System.out.println(jzsk + "test output 2");	
+                   	System.out.println(jazs.hand + "test output");                //test / debug
+                   	
+                        
+                   	try {
+                        sleep(2000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }		
+          
                    	jazsz++;
                    	 
                     }

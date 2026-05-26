@@ -65,7 +65,12 @@ int r = 0;
    public Karten GetHandPos(int pos) {
     	return hand.get(pos);
     }
-    
+    public void RemoveHandPos(int pos){
+    	hand.remove(pos);    	
+    }
+    public void AddHandPos(Karten karte) {
+    	hand.add(karte);
+    }
 //  public  hand GetHand() {
    // 	return hand;						//array hand als ruckgabe geht noch ned
  //   }
