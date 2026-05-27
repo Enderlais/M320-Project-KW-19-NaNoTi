@@ -23,6 +23,6 @@ public abstract class Karten {
 	void setStuck(int stuck) {
 		this.stuck = stuck;
 	}
-    public abstract void benutzen();    //GANZ WICHTIG: Damit alle Unterklassen ihre eigene benutzen() Methode haben
+    public abstract void Benutzen(Spieler spieler, int swn);    //GANZ WICHTIG: Damit alle Unterklassen ihre eigene benutzen() Methode haben
 }
 
