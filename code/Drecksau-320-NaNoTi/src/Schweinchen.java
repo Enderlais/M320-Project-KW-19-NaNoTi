@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+
 public class Schweinchen {
     private boolean drecking;
     private boolean hausbesitzer;
     private boolean blitzableiter;
     private boolean verschlossen;
-
+    ArrayList<Schweinchen> sak = new ArrayList<>(); 					//sak = schweinchen attributs karte
+    
     Schweinchen(boolean drecking, boolean Hausbesitzer, boolean blitzableiter, boolean verschlossen) {
         this.drecking = drecking;
         this.hausbesitzer = Hausbesitzer;
