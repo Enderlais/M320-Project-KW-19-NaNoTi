@@ -203,11 +203,11 @@ public class Main {
 
                         // muss noch if selber karte einbauen
 
-                        System.out.println("bitte wehle einen gegner dem du die karte antuhen willst");
+                        System.out.println("Bitte wähle einen Gegner, dem du die Karte verwenden willst");
                         System.out.println(spnList);
                         Spieler jzas = spnList.get(sc.nextInt());                                            //jsas jetztig zu atterkierendes schwein
 
-                        System.out.println("bitte wehle eine gegnerischesch schweinchen");
+                        System.out.println("Bitte wähle ein gegnerischen schweinchen");
                         System.out.println(jzas.sps);
                         int jzasch = sc.nextInt() - 1;                                            //jsasch jetztig zu atterkierendes schwein //muss noch check einbauen von oben wegen nummer
 
