@@ -208,6 +208,7 @@ public class Main {
           
                         while(jsza > spnList.size() || jsza == -1 ) {
                         	System.out.println("invalide eingabe, bitte versure chochmal");
+                        	 jsza = sc.nextInt() - 1;	
                         }
                         Spieler jzas = spnList.get(jsza);
                         

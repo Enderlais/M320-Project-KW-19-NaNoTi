@@ -16,7 +16,7 @@ public class WaschKarte extends Karten {
         
         
         
-        jsw.SetDrecking(true);    // dann set dreckig auf 0							//jws ist jetztige schwein nummer
+        jsw.SetDrecking(false);    // dann set dreckig auf 0							//jws ist jetztige schwein nummer
         spieler.sps.set(swn, jsw);      // Schwein wird mit dreckigem Schwein ersetzt
         System.out.println("Ein Schwein wurde dreckig!");
     }
