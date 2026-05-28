@@ -203,8 +203,14 @@ public class Main {
 
                         System.out.println("Bitte wähle einen Gegner, dem du die Karte verwenden willst");
                         System.out.println(spnList);
-                        Spieler jzas = spnList.get(sc.nextInt() - 1 );                                            //jsas jetztig zu atterkierendes schwein
-
+                        int jsza = sc.nextInt() - 1;								//jetztiger spieler zum angreifen
+                                                                    //jsas jetztig zu atterkierendes schwein
+          
+                        while(jsza > spnList.size() || jsza == -1 ) {
+                        	System.out.println("invalide eingabe, bitte versure chochmal");
+                        }
+                        Spieler jzas = spnList.get(jsza);
+                        
                         System.out.println("Bitte wähle ein gegnerischen schweinchen");
                         System.out.println(jzas.sps);
                         int jzasch = sc.nextInt() - 1;                                            //jsasch jetztig zu atterkierendes schwein //muss noch check einbauen von oben wegen nummer
