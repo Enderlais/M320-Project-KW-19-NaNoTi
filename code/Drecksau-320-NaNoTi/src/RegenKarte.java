@@ -1,17 +1,24 @@
-
 public class RegenKarte extends Karten {
 
-	RegenKarte(String name, int stuck) {
-		 super(name, stuck);
-		}	
+    RegenKarte(String name, int stuck) {
+        super(name, stuck);
+    }
 
     @Override
-    public void benutzen() {
-        //if(Schweinchen.GetHausbesitzer() = true) {
-        //		System.out.println("leider besitzt das schwein ein haus!");
-        //	}else {
-        //	Schweinchen.SetHausbesitzer(true);
-        System.out.println("Ein Schwein wurde sauber!");
+    public void benutzen(Spieler spieler, int swn) {                                    //swn = schweinenummer 			//geht ned, weiss nicht wiso
+        int swn2 = 0;
+        while (spieler.sps.size() != swn2) {
+            Schweinchen jsw = spieler.sps.get(swn2);
+            if (jsw.GetHausbesitzer() == false) {
+                jsw.SetDrecking(false);    // dann set dreckig auf 0							//jws ist jetzige schweinchen
+            } else {
+                System.out.println("Leider hat Schweinchen Nummer " + swn + " von " + spieler + " ein Haus.");
+            }
+            spieler.sps.set(swn2, jsw);
+            swn2++;
+        }
+
+        System.out.println("Ein Schwein wurde dreckig!");
     }
 
 }

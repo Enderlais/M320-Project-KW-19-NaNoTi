@@ -1,4 +1,3 @@
-
 public class VerschlossenKarte extends Karten {
 
 
@@ -8,9 +7,9 @@ public class VerschlossenKarte extends Karten {
 
 
     @Override
-    public void benutzen() {
+    public void benutzen(Spieler spieler, int swn) {
         //	HausKarte.setVerschlossen(true);
-        System.out.println("die scheune wurde Verrigelt!");
+        System.out.println("Das Haus wurde verriegelt!");
     }
 
 
