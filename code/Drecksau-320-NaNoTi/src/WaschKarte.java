@@ -12,7 +12,7 @@ public class WaschKarte extends Karten {
         //Schweinchen.setDrecking(false);
         //  System.out.println("Das schwein wurde gewaschen");
         //}else{ System.out.println("der bauer kahm nicht herrein"");}
-        System.out.println("Das schwein wurde gewaschen");
+        System.out.println("Ein Schweinchen wurde gewaschen!");
     }
 }
 

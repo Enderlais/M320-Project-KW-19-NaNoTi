@@ -123,7 +123,7 @@ public class KartenDeck {
         return bob; // musst karte mitgeben und nicht remove.
     }
 
-    public void ablegen(Karten karte) {
-        ablagestapel.add(karte); // Da wird die Karte in einen anderen Stapel abgelegt
+    public void ablegen(Karten jzsk) {
+        ablagestapel.add(jzsk); // Da wird die Karte in einen anderen Stapel abgelegt
     }
 }

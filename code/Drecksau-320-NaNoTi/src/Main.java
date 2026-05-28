@@ -123,7 +123,6 @@ public class Main {
 
                 }
 
-                System.out.println("Spiel startet!");
 
                 // Kartendeck nur EINMAL erstellen
                 KartenDeck deck = new KartenDeck();
@@ -135,20 +134,18 @@ public class Main {
                     r.InitSchweichen(spa);
                     r.InitHand(deck);
                 }
-
+                System.out.println("Spiel startet!");
                 //  Initschweichen(spa)
 
                 // press anny key to continue
-                int runde = 1;
 
                 boolean spiellauf = true;
 
-
                 while (spiellauf) {
-
+                    int runde = 1;
                     System.out.println();
                     System.out.println("Runde " + runde);
-                    System.out.println("_____");
+                    System.out.println("-----");
                     int r = 0;
                     r = (int) Math.random() * 10000;
                     r = r + 150;
@@ -164,7 +161,7 @@ public class Main {
                     Spieler jazs = new Spieler("Bob Stadler");    //jazs = jetzidger am zuge spieler
                     int jazsz = 0;    //jazs = jetzidger am zuge spieler zahl
 
-                    while (jazsz != spa) {
+                    while (jazsz != spa - 1) {
                         int jzskw = 0;
                         jazs = spnList.get(jazsz);                                          //  jzsk     jetzt zu spielende karte
                         System.out.println("Spieler " + jazs + " ist dran!");
@@ -196,6 +193,7 @@ public class Main {
                         }
                         Karten jzsk = jazs.GetHandPos(jzskw);                      //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck    || jzsk ist jetztige zu spielende karte 
                         System.out.println(jzsk + "test Output 1");                //test / debug
+                        deck.ablegen(jzsk);
                         jazs.hand.remove(jzskw);
                         System.out.println(jzsk + "test output 2");
                         System.out.println(jazs.hand + "test output");                //test / debug
@@ -220,6 +218,9 @@ public class Main {
                         }
 
                         jazsz++;
+                        if (jazsz == spnList.size()) {
+                            runde++;
+                        }
 
                     }
                 }

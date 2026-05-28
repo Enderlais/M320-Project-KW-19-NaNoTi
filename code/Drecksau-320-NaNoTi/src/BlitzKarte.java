@@ -7,9 +7,9 @@ public class BlitzKarte extends Karten {
 
     @Override
     public void benutzen(Spieler spieler, int swn) {                                    //swn = schweinenummer 			//geht ned, weiss nicht wiso
-    
 
+    System.out.println("Ein Haus wurde zerstört!"); //hat keine Funktion
     }
-    }
+}
 
 
