@@ -1,4 +1,3 @@
-
 public class Schweinchen {
     private boolean drecking;
     private boolean hausbesitzer;

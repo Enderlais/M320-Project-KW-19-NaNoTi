@@ -1,12 +1,11 @@
-
 public class RegenKarte extends Karten {
 
-	RegenKarte(String name, int stuck) {
-		 super(name, stuck);
-		}	
+    RegenKarte(String name, int stuck) {
+        super(name, stuck);
+    }
 
     @Override
-    public void benutzen() {
+    public void benutzen(Spieler spieler, int swn) {
         //if(Schweinchen.GetHausbesitzer() = true) {
         //		System.out.println("leider besitzt das schwein ein haus!");
         //	}else {

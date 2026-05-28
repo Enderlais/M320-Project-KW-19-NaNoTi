@@ -94,8 +94,8 @@ public class Main {
                         }
 
                     } catch (Exception e) {
-
                         System.out.println("Nur Zahlen erlaubt!");
+                        System.out.println("Bitte Spieleranzahl eingeben:");
                         sc.nextLine();
                     }
                 }
@@ -114,15 +114,14 @@ public class Main {
                 if (spListshow.equalsIgnoreCase("j")) {
 
                     System.out.println(spnList); //spnList = Spielername Liste
-                    
+
                     try {
                         sleep(3000);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
-                    
-                    
-                    
+
+
                 }
 
                 System.out.println("Spiel startet!");
@@ -130,23 +129,22 @@ public class Main {
                 // Kartendeck nur EINMAL erstellen
                 KartenDeck deck = new KartenDeck();
                 int q = 0;
-                 while(q != spa) { 
-                	 Spieler r = new Spieler("placeholder");
-                	 r = spnList.get(q);								//	initialisiert alles fuer den spieler
-                	 q++;
-                	 r.InitSchweichen(spa);
-                	 r.InitHand(deck);
-                 }
-                
-              //  Initschweichen(spa)
+                while (q != spa) {
+                    Spieler r = new Spieler("placeholder");
+                    r = spnList.get(q);                                //	initialisiert alles fuer den spieler
+                    q++;
+                    r.InitSchweichen(spa);
+                    r.InitHand(deck);
+                }
+
+                //  Initschweichen(spa)
 
                 // press anny key to continue
                 int runde = 1;
 
                 boolean spiellauf = true;
 
-                
-                
+
                 while (spiellauf) {
 
                     System.out.println();
@@ -163,47 +161,72 @@ public class Main {
                     }
 
                     // Jeder Spieler ist einmal dran
-          
-                 Spieler jazs = new Spieler("Bob Stadler");    //jazs = jetzidger am zuge spieler
-                 int   jazsz = 0;    //jazs = jetzidger am zuge spieler zahl
-                 
-                    while(jazsz != spa) { 
-                    	 int jzskw = 0;
-                   	 jazs = spnList.get(jazsz);   										  //  jzsk     jetzt zu spielende karte    
-                   	  		System.out.println("spieler " + jazs + " am zuge!");
-                   	 
-                   	 jazs.NachZihen(deck);
-                   	 
-                   	 System.out.println("dein volles deck : " + jazs.hand);
-                   	 System.out.println("welche karte willst du spielen?");
-                   	 boolean bernt = true;
-                   	 while(bernt == true) { 
-                   		
-                   	 jzskw = sc.nextInt() - 1;               	 //  jzskw    jetzt zu spielende karte wahl
-                   	if ( jzskw >= -1 ||  jzskw <= 4) {System.out.println("invalide eingabe, bitte zahl zwischen 1 ~ 3 eingeben");}				// korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
-                   	else {bernt = false;}
-                   	 } 
-                   	 Karten jzsk = jazs.GetHandPos(jzskw);		              //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck
-                   	  System.out.println(jzsk + "test Output 1");                //test / debug
-                   	  jazs.hand.remove(jzskw);
-                   	 System.out.println(jzsk + "test output 2");	
-                   	System.out.println(jazs.hand + "test output");                //test / debug
-                   	
-                        
-                   	try {
-                        sleep(2000);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                    }		
-          
-                   	jazsz++;
-                   	 
+
+                    Spieler jazs = new Spieler("Bob Stadler");    //jazs = jetzidger am zuge spieler
+                    int jazsz = 0;    //jazs = jetzidger am zuge spieler zahl
+
+                    while (jazsz != spa) {
+                        int jzskw = 0;
+                        jazs = spnList.get(jazsz);                                          //  jzsk     jetzt zu spielende karte
+                        System.out.println("Spieler " + jazs + " ist dran!");
+
+                        jazs.NachZihen(deck);
+
+                        System.out.print("Dein aktueller deck: ");
+                        System.out.println(jazs.hand);
+                        System.out.println("Welche Karte willst du spielen?");
+                        boolean bernt = true;
+                        while (bernt == true) {
+                            try {
+                                bernt = true;
+                                jzskw = sc.nextInt() - 1;                 //  jzskw    jetzt zu spielende karte wahl
+                                if (jzskw >= -1 || jzskw <= 4) {
+                                    System.out.println("Valide Eingabe!");  // korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
+                                } else {
+                                    System.out.println("Invalide Eingabe, bitte eine Zahl zwischen 1 bis 3 eingeben");
+                                    break;
+                                }
+                            } catch (IndexOutOfBoundsException e1) {
+                                System.out.println("Bitte eine Zahl zwischen 1 bis 3 eingeben");
+                                System.out.println("Welche Karte willst du spielen?");
+                            } catch (Exception e) {
+
+                                System.out.println("Nur Zahlen erlaubt!");
+                                System.out.println("Welche Karte willst du spielen?");
+                                sc.nextLine();
+                            }
+                            bernt = false;
+                        }
+                        Karten jzsk = jazs.GetHandPos(jzskw);                      //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck
+                        System.out.println(jzsk + "test Output 1");                //test / debug
+                        jazs.hand.remove(jzskw);
+                        System.out.println(jzsk + "test output 2");
+                        System.out.println(jazs.hand + "test output");                //test / debug
+
+
+                        try {
+                            sleep(2000);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+
+                        jazsz++;
+
                     }
                 }
+            } else if (awn.equalsIgnoreCase("n")) {
+
+                System.out.println(":(");
+                break;
+
+            } else {
+
+                System.out.println("Ungültige Eingabe");
             }
         }
     }
 }
+
                     
                     
                     
@@ -273,16 +296,7 @@ public class Main {
 
                 break;
 
-            } else if (awn.equalsIgnoreCase("n")) {
-
-                System.out.println(":(");
-                break;
-
-            } else {
-
-                System.out.println("Ungültige Eingabe");
             }
-        }
 
         sc.close();
     }
