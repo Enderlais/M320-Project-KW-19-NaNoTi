@@ -95,7 +95,6 @@ public class Main {
 
                     } catch (Exception e) {
                         System.out.println("Nur Zahlen erlaubt!");
-                        System.out.println("Bitte Spieleranzahl eingeben:");
                         sc.nextLine();
                     }
                 }
