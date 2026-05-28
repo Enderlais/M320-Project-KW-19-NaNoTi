@@ -203,7 +203,7 @@ public class Main {
 
                         System.out.println("Bitte wähle einen Gegner, dem du die Karte verwenden willst");
                         System.out.println(spnList);
-                        Spieler jzas = spnList.get(sc.nextInt());                                            //jsas jetztig zu atterkierendes schwein
+                        Spieler jzas = spnList.get(sc.nextInt() - 1 );                                            //jsas jetztig zu atterkierendes schwein
 
                         System.out.println("Bitte wähle ein gegnerischen schweinchen");
                         System.out.println(jzas.sps);
