@@ -177,23 +177,22 @@ public class Main {
                         boolean bernt = true;
                         while (bernt == true) {
                             try {
-                                jzskw = sc.nextInt() - 1;                 //  jzskw    jetzt zu spielende karte wahl
-                                if (jzskw >= 0 && jzskw <= 2) {
+                                jzskw = sc.nextInt() - 1;                 //jetzt zu spielende karte wahl
+                                if (jzskw >= 0 && jzskw <= 2) { // korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
                                     System.out.println("Valide Eingabe!");
-                                    bernt = false;   // korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
+                                    bernt = false;
                                 } else {
-                                    throw new IndexOutOfBoundsException(); //Kann irgendwie nicht laufen
-                                }
-                            } catch (IndexOutOfBoundsException e1) {
-                                System.out.println("Bitte eine Zahl zwischen 1 bis 3 eingeben");
-                                System.out.println("Welche Karte willst du spielen?");
-                                sc.nextInt();
-                            } catch (Exception e) {
+                                    System.out.println("Bitte eine Zahl zwischen 1 bis 3 eingeben");
+                                    System.out.println(jazs.hand);
+                                    System.out.println("Welche Karte willst du spielen?");  //Kann irgendwie nicht laufen
 
+                                }
+                            } catch (Exception e) {
                                 System.out.println("Nur Zahlen erlaubt!");
+                                System.out.println(jazs.hand);
                                 System.out.println("Welche Karte willst du spielen?");
-                                sc.nextInt();
-                            } bernt = false;
+                                sc.nextLine();
+                            }
                         }
                         Karten jzsk = jazs.GetHandPos(jzskw);                      //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck    || jzsk ist jetztige zu spielende karte 
                         System.out.println(jzsk + "test Output 1");                //test / debug
@@ -201,19 +200,19 @@ public class Main {
                         System.out.println(jzsk + "test output 2");
                         System.out.println(jazs.hand + "test output");                //test / debug
 
-                        
+
                         // muss noch if selber karte einbauen
-                        
-                       System.out.println("bitte wehle einen gegner dem du die karte antuhen willst");
-                       System.out.println(spnList);
-                       Spieler jzas =  spnList.get(sc.nextInt());                             				//jsas jetztig zu atterkierendes schwein
-                       
-                       System.out.println("bitte wehle eine gegnerischesch schweinchen");
-                       System.out.println(jzas.sps);
-                       int jzasch = sc.nextInt() - 1 ;         									//jsasch jetztig zu atterkierendes schwein //muss noch check einbauen von oben wegen nummer
-                       
+
+                        System.out.println("Bitte wähle einen Gegner, dem du die Karte verwenden willst");
+                        System.out.println(spnList);
+                        Spieler jzas = spnList.get(sc.nextInt());                                            //jsas jetztig zu atterkierendes schwein
+
+                        System.out.println("Bitte wähle ein gegnerischen schweinchen");
+                        System.out.println(jzas.sps);
+                        int jzasch = sc.nextInt() - 1;                                            //jsasch jetztig zu atterkierendes schwein //muss noch check einbauen von oben wegen nummer
+
                         jzsk.benutzen(jzas, jzasch);
-                        
+
                         try {
                             sleep(2000);
                         } catch (InterruptedException e) {
