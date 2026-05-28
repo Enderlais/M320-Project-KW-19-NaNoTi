@@ -177,24 +177,23 @@ public class Main {
                         boolean bernt = true;
                         while (bernt == true) {
                             try {
-                                bernt = true;
                                 jzskw = sc.nextInt() - 1;                 //  jzskw    jetzt zu spielende karte wahl
-                                if (jzskw >= -1 || jzskw <= 4) {
-                                    System.out.println("Valide Eingabe!");  // korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
+                                if (jzskw >= 0 && jzskw <= 2) {
+                                    System.out.println("Valide Eingabe!");
+                                    bernt = false;   // korrigiert nutzereingabe so das es mit dem array stimmt. und giebt falsch aus wenn zu niedrig
                                 } else {
-                                    System.out.println("Invalide Eingabe, bitte eine Zahl zwischen 1 bis 3 eingeben");
-                                    break;
+                                    throw new IndexOutOfBoundsException(); //Kann irgendwie nicht laufen
                                 }
                             } catch (IndexOutOfBoundsException e1) {
                                 System.out.println("Bitte eine Zahl zwischen 1 bis 3 eingeben");
                                 System.out.println("Welche Karte willst du spielen?");
+                                sc.nextLine();
                             } catch (Exception e) {
 
                                 System.out.println("Nur Zahlen erlaubt!");
                                 System.out.println("Welche Karte willst du spielen?");
                                 sc.nextLine();
-                            }
-                            bernt = false;
+                            } bernt = false;
                         }
                         Karten jzsk = jazs.GetHandPos(jzskw);                      //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck
                         System.out.println(jzsk + "test Output 1");                //test / debug
