@@ -6,9 +6,10 @@ public class BlitzKarte extends Karten {
 
 
     @Override
-    public void benutzen(Spieler spieler, int swn) {
-        //	HausKarte.SetGeblitzt(true);
-        System.out.println("Ein Stall wurde zerstört!");
+    public void benutzen(Spieler spieler, int swn) {                                    //swn = schweinenummer 			//geht ned, weiss nicht wiso
+    
+
     }
-}
+    }
+
 
