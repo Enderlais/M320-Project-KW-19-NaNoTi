@@ -140,9 +140,15 @@ public class Main {
                 // press anny key to continue
 
                 boolean spiellauf = true;
-
+                System.out.println(spa);    
+                try {
+                    sleep(3000);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+                int runde = 1;
                 while (spiellauf) {
-                    int runde = 1;
+                    
                     System.out.println();
                     System.out.println("Runde " + runde);
                     System.out.println("-----");
@@ -161,7 +167,7 @@ public class Main {
                     Spieler jazs = new Spieler("Bob Stadler");    //jazs = jetzidger am zuge spieler
                     int jazsz = 0;    //jazs = jetzidger am zuge spieler zahl
 
-                    while (jazsz != spa - 1) {
+                    while (jazsz != spa  ) {
                         int jzskw = 0;
                         jazs = spnList.get(jazsz);                                          //  jzsk     jetzt zu spielende karte
                         System.out.println("Spieler " + jazs + " ist dran!");
@@ -192,8 +198,13 @@ public class Main {
                             }
                         }
                         Karten jzsk = jazs.GetHandPos(jzskw);                      //nimmt die hand position die ausgewhelt wurde und giebt diese zuruck    || jzsk ist jetztige zu spielende karte 
-                        System.out.println(jzsk + "test Output 1");                //test / debug
-                        deck.ablegen(jzsk);
+                        System.out.println(jzsk + "test Output 1");   //test / debug
+                        if(jzsk.getKartenname() == "Haus") {
+                        	
+                        	
+                        	System.out.println("haus karte erfolgreich zum schwein karen array gemacht anstadt ablege stabel");
+                        
+                        }else {deck.ablegen(jzsk);}
                         jazs.hand.remove(jzskw);
                         System.out.println(jzsk + "test output 2");
                         System.out.println(jazs.hand + "test output");                //test / debug
@@ -203,8 +214,8 @@ public class Main {
 
                         System.out.println("Bitte wähle einen Gegner, dem du die Karte verwenden willst");
                         System.out.println(spnList);
-                        int jsza = sc.nextInt() - 1;								//jetztiger spieler zum angreifen
-                                                                    //jsas jetztig zu atterkierendes schwein
+                        int jsza = sc.nextInt() - 1;								//jsza  jetztiger spieler zum angreifen
+                                                                    
           
                         while(jsza > spnList.size() || jsza == -1 ) {
                         	System.out.println("invalide eingabe, bitte versure chochmal");
@@ -216,7 +227,7 @@ public class Main {
                         System.out.println(jzas.sps);
                         int jzasch = sc.nextInt() - 1;                                            //jsasch jetztig zu atterkierendes schwein //muss noch check einbauen von oben wegen nummer
 
-                        jzsk.benutzen(jzas, jzasch);
+                        jzsk.benutzen(jzas, jzasch);												//jsasch jetztig zu atterkierendes schwein
 
                         try {
                             sleep(2000);
@@ -224,13 +235,21 @@ public class Main {
                             Thread.currentThread().interrupt();
                         }
 
+                        
+                        	if(jzsk.getKartenname() == "Haus") {
+                        	Schweinchen jzaschh = jzas.sps.get(jzasch);					// jzaschh ist jetztig zu atterkierendes schwein Haus
+                        	jzaschh.hak.add(jzsk);
+                        	System.out.println("haus karte erfolgreich zum schwein karen array gemacht anstadt ablege stabel");
+                        
+                        }else {deck.ablegen(jzsk);}
+                        jazs.hand.remove(jzskw);
+                        
+                        
                         jazsz++;
-                        if (jazsz == spnList.size()) {
-                            runde++;
-                        }
+                        
 
+                    } runde++;    System.out.println("runde + 1");
                     }
-                }
             } else if (awn.equalsIgnoreCase("n")) {
 
                 System.out.println(":(");

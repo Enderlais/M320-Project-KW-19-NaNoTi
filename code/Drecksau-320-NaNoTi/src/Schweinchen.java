@@ -5,7 +5,7 @@ public class Schweinchen {
     private boolean hausbesitzer;
     private boolean blitzableiter;
     private boolean verschlossen;
-    ArrayList<Schweinchen> sak = new ArrayList<>(); 					//sak = schweinchen attributs karte
+    ArrayList<Karten> hak = new ArrayList<>(); 					//hak = haus aktuelle karten
     
     Schweinchen(boolean drecking, boolean Hausbesitzer, boolean blitzableiter, boolean verschlossen) {
         this.drecking = drecking;
